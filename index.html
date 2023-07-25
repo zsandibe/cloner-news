@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>📰 Clonernews</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="loading-animation"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+    <div class="header">
+        <h1>
+            <!-- <span style="padding:6px; border: 5px solid white">Y</span>  -->
+            ClonerNews
+        </h1>
+    </div>
+
+    <div class="main">
+
+        <div class="pages-titles" style="text-align:left">
+            <div class="button">
+                <h2 id="topstories" class="page-title" onclick="toggleButton('topstories');"> Top Stories </h2>
+            </div>
+
+            <div class="button">
+                <h2 id="newstories" class="page-title unselected" onclick="toggleButton('newstories');"> News </h2>
+            </div>
+
+            <div class="button">
+                <h2 id="beststories" class="page-title unselected" onclick="toggleButton('beststories');"> Best Stories </h2>
+            </div>
+
+            <div class="button">
+                <h2 id="askstories" class="page-title unselected" onclick="toggleButton('askstories');"> Ask </h2>
+            </div>
+
+            <div class="button">
+                <h2 id="showstories" class="page-title unselected" onclick="toggleButton('showstories');"> Show </h2>
+            </div>
+
+            <div class="button">
+                <h2 id="jobstories" class="page-title unselected" onclick="toggleButton('jobstories');"> Jobs </h2>
+            </div>
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <!-- MODAL -->
+
+
+    <div class="container" style="display:none">
+        <div class="email" onmouseover="this.classList.add('expand')" onmouseout="this.classList.remove('expand')">
+            <div class="from">
+                <div class="from-contents">
+                    <div class="name">👆🏻 Don't miss out...</div>
+                </div>
+            </div>
+
+            <div class="to">
+                <div class="to-contents">
+                    <div class="top">
+
+                        <div class="name-large">New stories have been published.</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Add JavaScript to remove loading screen after 3 seconds
+        setTimeout(function () {
+            var loadingContainer = document.querySelector('.loading-container');
+            loadingContainer.style.display = 'none';
+
+            var mainContent = document.querySelector('.main');
+            mainContent.style.display = 'block';
+        }, 3000); // Hide loading screen after 3 seconds (3000 milliseconds)
+    </script>
+    <script type="text/javascript" src="clonernews.js"></script>
+</body>
+
+</html>
